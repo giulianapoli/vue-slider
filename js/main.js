@@ -14,6 +14,24 @@
 const sliderApp = new Vue ({
   el: '#root',
   data: {
-    images: ['../images/image1.jpg', '../images/image2.jpg', '../images/image3.jpg', '../images/image4.jpg']
-  }
+    images: ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg', 'images/image4.jpg'],
+    counter: 0
+  },
+  methods: {
+    movePrev: function() {
+      if (this.counter === 0) {
+        this.counter = this.images.length - 1;
+      } else {
+        this.counter--;
+      }
+    },
+    moveNext: function() {
+      if (this.counter === this.images.length - 1) {
+        this.counter = 0;
+      } else {
+        this.counter++;
+      }
+    }
+}
+
 })

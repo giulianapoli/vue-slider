@@ -2,3 +2,7 @@
 .imgDiv {
   display: inline-block;
 }
+
+img {
+  width: 400px;
+}
